@@ -180,6 +180,85 @@ body {
     padding: 15px 
   }
 
+  @media (max-width: 600px) {
+    .page {
+      padding: 40px 10px;
+      background-size: 60px; /* shrink background bulldogs */
+    }
+  
+    .card {
+      padding: 1.5rem;
+      max-width: 90vw;
+    }
+  
+    .title {
+      font-size: 1.4rem;
+    }
+  
+    .description,
+    .caution,
+    .instructions {
+      font-size: 1rem;
+      margin: 0.8rem 0;
+      padding: 0 10px;
+    }
+  
+    .questions {
+      gap: 8px;
+      margin: 1rem 1rem;
+    }
+  
+    .question {
+      font-size: 0.95rem;
+    }
+  
+    .submit-button,
+    .alt-button {
+      font-size: 1rem;
+      padding: 12px 20px;
+    }
+  
+    .score {
+      font-size: 1.6rem;
+    }
+  
+    .message {
+      font-size: 1rem;
+    }
+  
+    .test-header {
+      gap: 10px;
+      margin-bottom: 0.5rem;
+      margin-top: 1rem;
+    }
+  
+    .line {
+      width: 60px;
+      height: 1.5px;
+    }
+  
+    .left-lines .official {
+      font-size: 1.3rem;
+      top: -1.2em;
+      right: -4rem;
+    }
+  
+    .main-title {
+      font-size: 1.6rem;
+      text-align: center;
+      padding: 5px;
+    }
+  
+    .result-card {
+      padding: 1.5rem;
+      max-height: none;
+    }
+  
+    .centered-page {
+      padding: 40px 10px;
+      min-height: auto;
+    }
+  }
   
   
   
