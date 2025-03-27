@@ -4,13 +4,16 @@ import axios from 'axios'
 import toast from 'react-hot-toast'
 import './Pages.css'
 
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL
+
+
 function Home() {
   const [questions, setQuestions] = useState([])
   const [answers, setAnswers] = useState({})
   const navigate = useNavigate()
 
   useEffect(() => {
-    axios.get('http://localhost:3001/questions').then(res => {
+    axios.get(`${API_BASE_URL}/questions`).then(res => {
       setQuestions(res.data)
       const initialAnswers = {}
       res.data.forEach(q => { initialAnswers[q.id] = false })
@@ -27,7 +30,7 @@ function Home() {
     const purityScore = 100 - checked
 
     try {
-      await axios.post('http://localhost:3001/submit', {
+      await axios.post(`${API_BASE_URL}/submit`, {
         score: purityScore,
         answers
       })
