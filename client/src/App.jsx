@@ -3,6 +3,7 @@ import { Toaster } from 'react-hot-toast'
 import Home from './pages/Home'
 import Results from './pages/Results'
 import Stats from './pages/Stats'
+import { Analytics } from "@vercel/analytics/react"
 import './App.css'
 
 function App() {
