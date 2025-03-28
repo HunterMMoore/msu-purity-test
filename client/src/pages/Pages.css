@@ -1,24 +1,26 @@
-body {
+html, body {
+    height: 100%;
     margin: 0;
+    padding: 0;
     background-color: #fdf6e3;
     font-family: 'Georgia', serif;
+    background-image: url('/mississippi_state_bulldogs_logo.png');
+    background-repeat: repeat;
+    background-size: 80px;
+    background-color: #fdf8ed;
   }
   
   .page {
     min-height: 100vh;
     width: 100vw;
-    background-color: #fffaf0;
-    background-image: url('/mississippi_state_bulldogs_logo.png');
-    background-repeat: repeat;
-    background-size: 80px;
-    background-color: #fdf8ed;
     display: flex;
     justify-content: center;
+    align-items: center;     /* optional: center horizontally */
     padding: 75px 15px;
     font-family: 'Georgia', serif;
-    overflow-x: hidden;
+    box-sizing: border-box;
   }
-  
+
   .card {
     max-width: 750px; /* Try 660–700 for that UTD width feel */
     padding: 2.5rem;
@@ -33,7 +35,7 @@ body {
     display: flex;
     justify-content: center;
     padding: 75px 15px;
-    min-height: 100vh;  /* Make sure content can fill full height */
+    min-height: 100dvh;  /* Make sure content can fill full height */
     box-sizing: border-box;
   }
   
@@ -59,8 +61,6 @@ body {
   .result-card .message {
     margin-bottom: 1.5rem; /* reduce if too much */
   }
-  
-  
   
   .title {
     font-size: 1.8rem;
@@ -162,7 +162,7 @@ body {
     font-size: 2rem;
     transform: rotate(-17deg);
     position: absolute;
-    top: -1.4em;
+    top: -1.2em;
     right: -6rem;
     font-weight: bold;
   }
@@ -183,8 +183,9 @@ body {
   @media (max-width: 600px) {
     .page {
       padding: 40px 10px;
-      background-size: 60px; /* shrink background bulldogs */
-    }
+      background-size: 60px;
+      min-height: 100vh; /* Add this line */
+    }  
   
     .card {
       padding: 1.5rem;
@@ -259,11 +260,3 @@ body {
       min-height: auto;
     }
   }
-  
-  
-  
-  
-  
-  
-  
-  
