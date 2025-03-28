@@ -154,6 +154,10 @@ html, body {
     height: 2px;
     background-color: #222;
   }
+
+  .left-lines {
+    position: relative; /* Ensures .official is positioned relative to this */
+  }  
   
   .left-lines .official {
     color: #800000;
@@ -162,10 +166,11 @@ html, body {
     font-size: 2rem;
     transform: rotate(-17deg);
     position: absolute;
-    top: -1.2em;
-    right: -6rem;
+    top: -1em;
+    right: -6.3rem;
     font-weight: bold;
   }
+  
   
   .title-wrapper {
     display: flex;
@@ -240,8 +245,9 @@ html, body {
   
     .left-lines .official {
       font-size: 1.3rem;
-      top: -1.2em;
-      right: -4rem;
+      top: -1.1em;
+      right: -4.4rem;
+      transform: rotate(-20deg);
     }
   
     .main-title {
