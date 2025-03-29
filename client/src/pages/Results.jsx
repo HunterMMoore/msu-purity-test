@@ -18,7 +18,7 @@ function Results() {
   }
 
   const handleShare = async () => {
-    const shareText = `My MSU Purity Score is ${score}/100 🤠
+    const shareText = `My MSU Purity Score is ${score} 🤠
 
 Take the test here: ${window.location.origin}`
 
