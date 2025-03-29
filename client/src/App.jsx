@@ -12,7 +12,7 @@ function App() {
       <Toaster position="top-center" />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/results" element={<Results />} />
+        <Route path="/results/:score" element={<Results />} />
         <Route path="/stats" element={<Stats />} />
       </Routes>
     </Router>

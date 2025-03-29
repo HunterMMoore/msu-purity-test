@@ -1,11 +1,12 @@
-import { useLocation, useNavigate } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import { toast } from 'react-hot-toast'
 import './Pages.css'
 
 function Results() {
-  const location = useLocation()
+  const { score: scoreParam } = useParams()
   const navigate = useNavigate()
-  const score = location.state?.score || 100
+
+  const score = parseInt(scoreParam || '100', 10)
 
   const getMessage = (score) => {
     if (score >= 90) return "Go touch grass!"
@@ -17,16 +18,14 @@ function Results() {
   }
 
   const handleShare = async () => {
-    const shareText = `My MSU Purity Score: ${score}/100 🤠
+    const shareText = `My MSU Purity Score is ${score}/100 🤠
 
-Take the test here: ${window.location.origin}`
+Take the test here: ${window.location.origin}/results/${score}`
 
     if (navigator.share) {
       try {
         await navigator.share({
-          title: 'MSU Purity Test',
-          text: shareText,
-          url: window.location.origin,
+          text: shareText
         })
       } catch (err) {
         console.log('Share cancelled', err)

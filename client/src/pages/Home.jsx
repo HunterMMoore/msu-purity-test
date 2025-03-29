@@ -28,18 +28,19 @@ function Home() {
   const handleSubmit = async () => {
     const checked = Object.values(answers).filter(v => v).length
     const purityScore = 100 - checked
-
+  
     try {
       await axios.post(`${API_BASE_URL}/submit`, {
         score: purityScore,
         answers
       })
-      navigate('/results', { state: { score: purityScore } })
+      // ✅ Navigate to /results/{score} instead of using location.state
+      navigate(`/results/${purityScore}`)
     } catch (err) {
       toast.error('Failed to submit test')
     }
   }
-
+  
   return (
     <div className="page">
       <div className="card">
