@@ -67,7 +67,7 @@ function Home() {
           The first ever MSU Purity Test. Serving as a way for students to bond and track their experiences throughout their time at Mississippi State University. It's a voluntary opportunity for students to reflect on their unique university journey.
         </p>
         <p className="caution">
-          <strong>Caution: This is not a bucket list. You are beyond cooked if you complete all the items on this list.</strong>
+          <strong>Caution: This is not a bucket list. You are cooked if you complete all the items on this list.</strong>
         </p>
         <p className="instructions">
           Click on every item you have done. Your purity score will be calculated at the end.
